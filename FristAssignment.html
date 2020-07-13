@@ -1,0 +1,52 @@
+<html>
+<head>
+	
+</head>
+<body>
+	<div id = "demo"></div>
+	<div id = "demo1"></div>
+	<script type="text/javascript">
+		function showDate()
+		{
+		
+	var D = new Date();
+var weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+
+  var n = weekday[D.getDay()];
+ 
+  var h = D.getHours();
+  var m = D.getMinutes();
+  var s = D.getSeconds();
+
+  var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+
+  var displayDate = h + session + ":" + m + ":" + s;
+document.getElementById("demo").innerHTML = "Today is:" + n ;
+ document.getElementById("demo1").innerHTML = displayDate;
+
+		}
+		showDate();
+
+
+
+	</script>
+</body>
+</html>
+
