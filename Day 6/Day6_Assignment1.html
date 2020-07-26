@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body  onload="bgDisco()">  
+
+<script type="text/javascript" language="javascript">  
+            function bgDisco()  
+         {  
+            var x = Math.round(255 * Math.random());  
+            var num1 = getHex(x);  
+            var y = Math.round(255 * Math.random());  
+            var num2 = getHex(y);  
+            var z = Math.round(255 * Math.random());  
+            var num3 = getHex(z);  
+            document.body.style.background = "#" + num1 + num2 + num3;  
+            setTimeout("bgDisco()", 1000);  
+      }  
+/* Method To Convert Decimal To Hexadecimal */  
+   
+      function getHex(dec)  
+      {  
+         var hexArray = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F");  
+         var code1 = Math.floor(dec / 16);  
+         var code2 = dec - code1 * 16;  
+         var decToHex = hexArray[code2];  
+         return (decToHex);  
+        }  
+</script>
+
+</body>
+</html>
